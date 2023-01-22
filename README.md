@@ -4,11 +4,11 @@
 
 Provides a char-based, prefixable CharIDField for your Django models.
 
-It can utilise [cuid], [ksuid], [ulid] or any other string-based UID generation systems.
+It can utilise [cuid2], [ksuid], [ulid] or any other string-based UID generation systems.
 
 It can be used as the primary key, or simple another key on your models.
 
-[cuid]: https://github.com/ericelliott/cuid
+[cuid2]: https://github.com/paralleldrive/cuid2
 [ksuid]: https://github.com/segmentio/ksuid
 [ulid]: https://github.com/ulid/spec
 
@@ -27,7 +27,7 @@ To get us a global namespace of collision-resistant IDs that:
 * are collision-resistant to allow for client side generation
 * exist now. UUID v6, v7, v8 are in RFC draft and not ready (Jul '21).
 
-[cuid], [ksuid], [ulid] & many others offer this now, and prefixing gets us the global namespace.
+[cuid2], [ksuid], [ulid] & many others offer this now, and prefixing gets us the global namespace.
 
 **Why not use integers?**
 
@@ -63,7 +63,7 @@ For example:
 
 |UID Spec|Python Library|What could it look like? (with a prefix `dev_`)|
 |--------|--------------|----------------------------------------|
-|[cuid]|cuid.py: [GH](https://github.com/necaris/cuid.py) / [PyPi](https://pypi.org/project/cuid/)|`dev_ckpffbliw000001mi3fw42vsn`|
+|[cuid2]|cuid2.py: [GH](https://github.com/overflowdigital/cuid2.py) / [PyPi](https://pypi.org/project/cuid2/)|`dev_tz4a98xxat96iws9zmbrgj3a`|
 |[ksuid]|cyksuid: [GH](https://github.com/timonwong/cyksuid) / [PyPi](https://pypi.org/project/cyksuid/)|`dev_1tOMP4onidzvnUFuTww2UeamY39`|
 |[ulid]|python-ulid: [GH](https://github.com/mdomke/python-ulid) / [PyPi](https://pypi.org/project/python-ulid/)|`dev_01F769XGM83VR75H86ZPHKK595`|
 
@@ -203,6 +203,6 @@ $ tox
 
 Uses GitHub Actions, see `./github/workflows`.
 
-[cuid]: https://github.com/ericelliott/cuid
+[cuid2]: https://github.com/paralleldrive/cuid2
 [ksuid]: https://github.com/segmentio/ksuid
 [ulid]: https://github.com/ulid/spec
